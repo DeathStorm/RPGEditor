@@ -18,6 +18,7 @@ namespace RPGEditor
         private int nextSceneNumber = 0;
 
         private List<int> allScenes = new List<int>();
+        private List<String> sceneDialogueList = new List<String>();
         private Scene curScene;
 
         private struct Scene
@@ -44,6 +45,7 @@ namespace RPGEditor
         {
             scenes.Add(nextSceneNumber, new Scene());
             allScenes.Add(nextSceneNumber);
+            sceneDialogueList.Add(nextSceneNumber.ToString());
             RefreshDropDowns();
             cbStoryID.SelectedValue = nextSceneNumber;
             nextSceneNumber++;
@@ -62,13 +64,23 @@ namespace RPGEditor
         private void RefreshDropDowns()
         {
             cbB1GoToScreen.Items.Clear();
+            cbB2GoToScreen.Items.Clear();
+            cbB3GoToScreen.Items.Clear();
+            cbB4GoToScreen.Items.Clear();
+            cbB5GoToScreen.Items.Clear();
+            cbB6GoToScreen.Items.Clear();
             cbStoryID.Items.Clear();
 
 
-            foreach (int sceneInt in allScenes)
-            { 
-                cbB1GoToScreen.Items.Add(sceneInt);
-                cbStoryID.Items.Add(sceneInt);
+            foreach (String sceneString in sceneDialogueList)
+            {
+                cbB1GoToScreen.Items.Add(sceneString);
+                cbB2GoToScreen.Items.Add(sceneString);
+                cbB3GoToScreen.Items.Add(sceneString);  
+                cbB4GoToScreen.Items.Add(sceneString);
+                cbB5GoToScreen.Items.Add(sceneString);
+                cbB6GoToScreen.Items.Add(sceneString);
+                cbStoryID.Items.Add(sceneString);
             }
             
             
@@ -76,8 +88,8 @@ namespace RPGEditor
 
         private void Editor_Load(object sender, EventArgs e)
         {
-            allScenes.Add(0);
-            allScenes.Add(99999);
+            sceneDialogueList.Add("START");
+            sceneDialogueList.Add("END");
         }
 
     }

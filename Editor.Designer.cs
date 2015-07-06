@@ -193,6 +193,8 @@
             // 
             // cbB1GoToScreen
             // 
+            this.cbB1GoToScreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbB1GoToScreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbB1GoToScreen.FormattingEnabled = true;
             this.cbB1GoToScreen.Location = new System.Drawing.Point(738, 497);
             this.cbB1GoToScreen.Name = "cbB1GoToScreen";
@@ -201,6 +203,8 @@
             // 
             // cbB2GoToScreen
             // 
+            this.cbB2GoToScreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbB2GoToScreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbB2GoToScreen.FormattingEnabled = true;
             this.cbB2GoToScreen.Location = new System.Drawing.Point(738, 524);
             this.cbB2GoToScreen.Name = "cbB2GoToScreen";
@@ -241,6 +245,8 @@
             // 
             // cbB3GoToScreen
             // 
+            this.cbB3GoToScreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbB3GoToScreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbB3GoToScreen.FormattingEnabled = true;
             this.cbB3GoToScreen.Location = new System.Drawing.Point(738, 551);
             this.cbB3GoToScreen.Name = "cbB3GoToScreen";
@@ -281,6 +287,8 @@
             // 
             // cbB4GoToScreen
             // 
+            this.cbB4GoToScreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbB4GoToScreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbB4GoToScreen.FormattingEnabled = true;
             this.cbB4GoToScreen.Location = new System.Drawing.Point(738, 578);
             this.cbB4GoToScreen.Name = "cbB4GoToScreen";
@@ -321,6 +329,8 @@
             // 
             // cbB5GoToScreen
             // 
+            this.cbB5GoToScreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbB5GoToScreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbB5GoToScreen.FormattingEnabled = true;
             this.cbB5GoToScreen.Location = new System.Drawing.Point(738, 605);
             this.cbB5GoToScreen.Name = "cbB5GoToScreen";
@@ -361,6 +371,8 @@
             // 
             // cbB6GoToScreen
             // 
+            this.cbB6GoToScreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbB6GoToScreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbB6GoToScreen.FormattingEnabled = true;
             this.cbB6GoToScreen.Location = new System.Drawing.Point(738, 632);
             this.cbB6GoToScreen.Name = "cbB6GoToScreen";
