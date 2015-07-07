@@ -47,7 +47,9 @@ namespace RPGEditor
             allScenes.Add(nextSceneNumber);
             sceneDialogueList.Add(nextSceneNumber.ToString());
             RefreshDropDowns();
-            cbStoryID.SelectedValue = nextSceneNumber;
+            //cbStoryID.SelectedText = nextSceneNumber.ToString();
+            //cbStoryID.SelectedValue = nextSceneNumber.ToString();
+            cbStoryID.SelectedItem = nextSceneNumber.ToString();
             nextSceneNumber++;
 
             
@@ -63,6 +65,29 @@ namespace RPGEditor
 
         private void RefreshDropDowns()
         {
+
+            cbStoryID.DataSource = null; 
+            cbStoryID.DataSource = sceneDialogueList;
+
+            cbB1GoToScreen.DataSource = null;
+            cbB1GoToScreen.DataSource = sceneDialogueList;
+
+            cbB2GoToScreen.DataSource = null;
+            cbB2GoToScreen.DataSource = sceneDialogueList;
+            
+            cbB3GoToScreen.DataSource = null;
+            cbB3GoToScreen.DataSource = sceneDialogueList;
+            
+            cbB4GoToScreen.DataSource = null;
+            cbB4GoToScreen.DataSource = sceneDialogueList;
+
+            cbB5GoToScreen.DataSource = null;
+            cbB5GoToScreen.DataSource = sceneDialogueList;
+
+            cbB6GoToScreen.DataSource = null;
+            cbB6GoToScreen.DataSource = sceneDialogueList;
+            return;
+
             cbB1GoToScreen.Items.Clear();
             cbB2GoToScreen.Items.Clear();
             cbB3GoToScreen.Items.Clear();
@@ -89,7 +114,16 @@ namespace RPGEditor
         private void Editor_Load(object sender, EventArgs e)
         {
             sceneDialogueList.Add("START");
-            sceneDialogueList.Add("END");
+            //sceneDialogueList.Add("END");
+
+            cbStoryID.DataSource = sceneDialogueList;
+            cbB1GoToScreen.DataSource = sceneDialogueList;
+            cbB2GoToScreen.DataSource = sceneDialogueList;
+            cbB3GoToScreen.DataSource = sceneDialogueList;
+            cbB4GoToScreen.DataSource = sceneDialogueList;
+            cbB5GoToScreen.DataSource = sceneDialogueList;
+            cbB6GoToScreen.DataSource = sceneDialogueList;
+
         }
 
     }

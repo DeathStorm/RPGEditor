@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +73,9 @@
             this.cbStoryID = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -195,6 +198,7 @@
             // 
             this.cbB1GoToScreen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbB1GoToScreen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbB1GoToScreen.DataSource = this.programBindingSource;
             this.cbB1GoToScreen.FormattingEnabled = true;
             this.cbB1GoToScreen.Location = new System.Drawing.Point(738, 497);
             this.cbB1GoToScreen.Name = "cbB1GoToScreen";
@@ -446,6 +450,10 @@
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataSource = typeof(RPGEditor.Program);
+            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,6 +506,7 @@
             this.Load += new System.EventHandler(this.Editor_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,5 +558,6 @@
         private System.Windows.Forms.ComboBox cbStoryID;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.BindingSource programBindingSource;
     }
 }
